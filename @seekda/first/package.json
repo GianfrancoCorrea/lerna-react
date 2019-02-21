@@ -1,0 +1,30 @@
+{
+  "name": "@seekda/first",
+  "version": "0.1.0",
+  "description": "",
+  "author": "Sebastian Escribano <sebastian.escribano@kognitiv.com>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "dist/index.js",
+  "module": "index.js",
+  "directories": {
+    "src": "src",
+    "dist": "dist",
+    "test": "__tests__"
+  },
+  "files": [
+    "src",
+    "dist"
+  ],
+  "publishConfig": {
+    "registry": "https://nexus.seekda.com/repository/npm-all/"
+  },
+  "scripts": {
+    "transpile": "babel src -d dist --ignore '**/*.spec.js,**/*.stories.js'",
+    "jest": "jest --coverage --verbose --color",
+    "lint": "eslint src/**/*.js __tests__/**/*.js"
+  },
+  "dependencies": {
+    "@seekda/shared-config": "^0.1.0"
+  }
+}
